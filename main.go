@@ -82,9 +82,9 @@ func main() {
 	// Create a new Fiber app
 	app := fiber.New()
 
-	// Middleware for handling CORS
+	// Middleware for handling CORS, allow frontend URL from Vercel
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:3000", // Adjust allowed origin based on your front-end
+		AllowOrigins: "https://mezmur-trivia.vercel.app", // Adjusted to allow your Vercel frontend
 		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
 
